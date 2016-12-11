@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+    blog:
+        image: million12/nginx-php
+        ports:
+          - "80:80"
+        links:
+          - blog-mysql
+        hostname: blog
+        volumes:
+          - /Users/developer/PhpstormProjects/yaya-blog:/data
+
+    blog-mysql:
+        image: percona
+        ports:
+          - "3307:3306"
+        environment:
+          MYSQL_DATABASE: blog
+          MYSQL_ROOT_PASSWORD: root
+        volumes:
+          - /Users/developer/PhpstormProjects/yaya-blog/mysql-data:/var/lib/mysql

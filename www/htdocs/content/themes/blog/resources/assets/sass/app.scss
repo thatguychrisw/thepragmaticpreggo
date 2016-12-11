@@ -1,0 +1,267 @@
+@import "bourbon";
+@import "base/base";
+@import "neat";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+$colorGroup1color1: #14CCB9;
+$colorGroup1color2: #3D9990;
+$highlightColor: #00FF55;
+$colorGroup2color1: #FF408E;
+$colorGroup2color2: #CC56C2;
+$colorNeutral: darken(#8E9899, 0);
+
+
+html {
+
+}
+
+body {
+  margin: 0;
+  background: #21B290;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+
+header {
+  @include span-columns(12);
+
+  background: url('../images/bg_pattern.png');
+  padding: 1em;
+  text-align: center;
+  height: 170px;
+
+  h3 {
+    color: #a974ae;
+
+    letter-spacing: .1em;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    font-size: .5em;
+    margin: 0;
+    color: #a974ae;
+  }
+}
+
+section.container {
+  @include outer-container(90%);
+
+  background: white;
+
+  section.hero {
+    @include span-columns(12);
+
+    height: 350px;
+    background: url("../images/header.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-bottom: 10px solid black;
+  }
+
+  section.blog-description {
+    @include span-columns(12);
+
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    padding: .5em 0 0 0;
+
+    .highlight {
+      color: #ff2484;
+    }
+
+    h1, h2 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .box {
+      h2 {
+        font-family: 'Tangerine', serif;
+        font-size: 1em;
+        text-transform: lowercase;
+        font-weight: 300;
+
+        i {
+          font-size: .6em;
+          padding: 0 .3em;
+        }
+      }
+
+
+    }
+  }
+
+  section.information {
+    float: right;
+    height: 100%;
+    color: black;
+    background: white;
+
+      h6 {
+          position: relative;
+
+          margin: 0;
+          font-size: 1.5em;
+          font-weight: normal;
+          padding: 0 .2em;
+          width: 102%;
+      }
+
+    section {
+      margin: 0 auto;
+      width: 100%;
+      padding: 1em;
+
+      &:not(:first-child) {
+        margin: .5em auto; 
+      }
+    }
+
+
+    .author {
+
+      .about {
+        margin-top: .5em;
+        text-align: center;
+
+        p {
+          margin: 0;
+          font-size: .4em;
+          font-family: 'Open Sans', sans-serif;
+
+          &.signature {
+            font-size: 1em; 
+            font-family: 'Tangerine', serif;
+          }
+        }
+
+        i {
+          &:not(:first-child) {
+            margin-left: 2px;
+          }
+        }
+
+        a {
+          color: black;
+
+          &:hover {
+            color: #F106FF;
+          }
+        }
+      }
+
+      .image {
+        margin: 0 auto;
+        border-radius: 100%;
+        background: #FFF;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        box-shadow: 0 1px 30px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+
+        img {
+          margin: 0 auto; 
+        }
+      }
+    }
+  }
+
+  section.articles {
+    @include span-columns(9);
+    @include omega();
+
+    color: #E7E7E7;
+    margin-top: -10px;
+
+    hr {
+      border: 2px solid black;
+      width: 95%;
+    }
+
+
+    article {
+      background: white;
+      margin: 1em 1em 2em 1em;
+      color: black;
+
+      div.featured-image img {
+        height: 200px;
+        width: auto;
+        box-shadow: 0 1px 30px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+      }
+    }
+
+    .titles {
+      // background: url("../images/bg_pattern.png") repeat-x top center;
+      .highlight {
+        color: #ff2484;
+        font-weight: bold;
+      }
+
+      .title {
+        font-size: 2em;
+        // background: #21B290;
+        // border-radius: 10px 10px 0 0;
+        font-family: 'Tangerine', serif;
+        font-weight: normal;
+        margin: 0;
+
+      }
+
+      .subtitle {
+        font-size: .4em;
+        margin-top: -10px;
+        padding-left: 2em;
+        font-weight: bold;
+      }
+    }
+
+    .content {
+      margin-top: .5em;
+      // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      // border-radius: 2px;
+
+      .more {
+        text-align: right;
+        width: 100%;
+        display: block;
+        font-size: .4em;
+        padding: 1em 4em 2em 0;
+
+        a {
+          color: white;
+          background: #AB74AE;
+          padding: .5em .8em;
+          border-radius: 2px;
+
+
+          &:hover {
+            background: #F106FF;
+          }
+        }
+      }
+
+      p {
+        padding: .5em .5em;
+        font-size: .6em;
+
+        line-height: 1.5em;
+        font-weight: 300;
+
+      }
+    }
+  }
+
+}
+
+
+
+
